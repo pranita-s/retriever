@@ -78,12 +78,35 @@ deactivated.
 RDataRetriever functions:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-datasets:
-*********
+datasets():
+***********
 
-**Arguments**
+**Arguments** : No arguments needed.
 
-**Description**
+**Description** : The function returns a list of available datasets.
+
+**Example** :
+
+::
+
+  rdataretriever::datasets()
+
+fetch():
+********
+
+**Arguments** :
+* dataset - name of dataset to be downloaded
+* quiet - decides if warnings need to be displayed (TRUE/FALSE)
+* data_names - name assigned to dataset once it is downloaded
+
+**Description** : Each datafile in a given dataset is downloaded to a temporary directory and then imported as a
+data.frame as a member of a named list.
+
+**Example** :
+
+::
+
+  rdataretriever :: fetch(dataset = 'portal')
 
 Examples
 ~~~~~~~~
