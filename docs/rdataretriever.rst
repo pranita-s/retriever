@@ -1,15 +1,14 @@
-==================================
 Using the Data Retriever from R
-==================================
+===============================
 
 rdataretriever
-~~~~~~~~~~~~~~
+--------------
 
 The `Data Retriever`_ provides an R interface to the Data Retriever so
 that the Retriever's data handling can easily be integrated into R workflows.
 
 Installation
-~~~~~~~~~~~~
+------------
 
 To use the R package ``rdataretriever``, you first need to `install the Retriever <introduction.html#installing-binaries>`_.
 
@@ -32,7 +31,7 @@ the operating system and the presence of virtual environments in the system. Fol
 exemplify this reliance and how to find Retriever's path.
 
 Ubuntu OS with default Python:
-*******************************
+------------------------------
 If ``Retriever`` is installed in default Python, it can be found out in the system with the help
 of ``which`` command in the terminal. For example:
 
@@ -54,7 +53,8 @@ required by the function is actually the directory which contains ``Retriever``.
 final folder from the path (*retriever* in this case) needs to be removed before using it.
 
 Ubuntu OS with Anaconda environment:
-*************************************
+------------------------------------
+
 When ``Retriever`` is installed in an virtual environment, the user can track its location only
 when that particular environment is activated. To illustrate, assume the virtual environment is *py27*:
 
@@ -137,16 +137,14 @@ To get citation information for the ``rdataretriever`` in R use ``citation(packa
 .. _Data Retriever: http://data-retriever.org
 
 
-
-===============================
 RDataRetriever with PostgreSQL
-===============================
+------------------------------
 
 RDataRetriever supports different DBMS for storing of downloaded datasets through the Retriever R API. It supports PostgreSQL, MySQL, SQLite and MS Access.
 
 
 Installation of PostgreSQL in Ubuntu
-====================================
+------------------------------------
 
 PostgreSQL installation command differs on the basis of Ubuntu version (Trusty 14.04, Xenial 16.04, Zesty 17.04). The following are the steps:
 
@@ -202,9 +200,8 @@ You will be prompted to enter a password, which is ``abcdefgh``. You can create 
 
 You will be again prompted for password. After the successful setup of PostgreSQL, it can now be used with R API for Retriever.
 
-====================================
 Using PostgreSQL with RDataRetriever
-====================================
+------------------------------------
 
 While using PostgreSQL as a connection type for ``rdataretriever::install`` function, a file named ``postgres.conn`` is needed. It contains information for establishing connection with the requested DBMS, in this case, PostgreSQL. Default location of the file is the directory, through which RStudio is running. If it saved in some other location, its path needs to be given to the install function.
 In the above example, ``postgres.conn`` will look like below:
