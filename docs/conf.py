@@ -14,7 +14,7 @@ from retriever.lib.defaults import ENCODING
 encoding = ENCODING.lower()
 from retriever.lib.defaults import VERSION, COPYRIGHT
 from retriever.lib.scripts import SCRIPT_LIST
-from retriever.lib.tools import open_fw, to_str
+from retriever.lib.tools import open_fw
 
 # sys removes the setdefaultencoding method at startup; reload to get it back
 reload(sys)
@@ -50,7 +50,7 @@ for script_num, script in enumerate(script_list, start=1):
     datasetfile.write("-" * (len(title) - 1) + "\n\n")
     datasetfile.write(":name: {}\n\n".format(script.name))
     datasetfile.write(":reference:  `{}`\n\n".format(reference_link))
-    datasetfile.write(":citation: {}\n\n".format(to_str(script.citation)))
+    #datasetfile.write(":citation: {}\n\n".format(to_str(script.citation)))
     datasetfile.write(":description:  {}\n\n".format(script.description))
 datasetfile.close()
 
