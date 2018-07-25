@@ -50,7 +50,7 @@ for script_num, script in enumerate(script_list, start=1):
     datasetfile.write("-" * (len(title) - 1) + "\n\n")
     datasetfile.write(":name: {}\n\n".format(script.name))
     datasetfile.write(":reference:  `{}`\n\n".format(reference_link))
-    #datasetfile.write(":citation: {}\n\n".format(to_str(script.citation)))
+    datasetfile.write(":citation: {}\n\n".format((script.citation)))
     datasetfile.write(":description:  {}\n\n".format(script.description))
 datasetfile.close()
 
